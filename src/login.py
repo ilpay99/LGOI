@@ -12,6 +12,9 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(364, 207)
+        icon=QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/Picture/LG.jpg"),QtGui.QIcon.Normal,QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
@@ -29,6 +32,8 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setGeometry(QtCore.QRect(100, 100, 181, 31))
         self.lineEdit.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.lineEdit_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.lineEdit.setAttribute(QtCore.Qt.WA_InputMethodEnabled, False)
+        self.lineEdit_2.setAttribute(QtCore.Qt.WA_InputMethodEnabled, False)
         font = QtGui.QFont()
         font.setFamily("微软雅黑 Light")
         self.lineEdit_2.setFont(font)
@@ -51,6 +56,7 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setTextFormat(QtCore.Qt.AutoText)
         self.label.setObjectName("label")
+        self.label.setOpenExternalLinks(True)
         MainWindow.setCentralWidget(self.centralwidget)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -63,5 +69,4 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Login"))
         self.pushButton.setText(_translate("MainWindow", "Login"))
         self.pushButton_2.setText(_translate("MainWindow", "Register"))
-        self.label.setText(_translate("MainWindow", "<html><head/><body><p><a href=\"www.baidu.com\"><span style=\" text-decoration: underline; color:#0000ff;\">I forgot Password...</span></a></p></body></html>"))
-
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><a href='https://www.baidu.com/'><span style=\" text-decoration: underline; color:#0000ff;\">I forgot Password...</span></a></p></body></html>"))

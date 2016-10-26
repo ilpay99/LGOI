@@ -13,4 +13,4 @@ class Glob(object):
 		self._Username=None
 		self._AccessResult=-1
 		pass
-a=Glob()
+_Glob=Glob()
