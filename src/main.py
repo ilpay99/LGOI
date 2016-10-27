@@ -15,7 +15,6 @@ class mywindow(QMainWindow,Ui_MainWindow):
         Username=self.lineEdit.text()
         Password=self.lineEdit_2.text()
         Globvar._Glob.sendUserMessage(Username,Password)
-        self.hide()  
         Access=TryAccess.Access()
         Access.TryAccess(self)
         Access.DealWithAccessResult(self)
@@ -25,6 +24,7 @@ class mywindow(QMainWindow,Ui_MainWindow):
 
     def __init__(self):
         super(mywindow,self).__init__()
+        
         self.setupUi(self)
         self.pushButton.clicked.connect(self.Login)
         self.pushButton_2.clicked.connect(self.Register)
