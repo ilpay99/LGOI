@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QApplication , QMainWindow , QMessageBox
 from GIF import loadingGif
 import TryAccess,icon,Globvar
 import sys,ctypes
-from login import *
+from loginUI import *
 
 class mywindow(QMainWindow,Ui_MainWindow):
 
