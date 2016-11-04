@@ -31,13 +31,15 @@ class Glob(object):
 		DataText=open(self.DataTextPath,"r")
 		for nowLine in DataText.readlines():
 			data=nowLine.split()
+			while len(data)<2:
+				data.append(None)
 			self._dat[data[0]]=data[1]
 
 	def getdata(self,key):
 		return self._dat[key]
 
 	def __init__(self):
-		self.DataTextPath="..\\Userdate\\data.dat"
+		self.DataTextPath=".\\Userdata\\data.dat"
 		self._dat={}
 		self._dat["Password"]=None
 		self._dat["Username"]=None
